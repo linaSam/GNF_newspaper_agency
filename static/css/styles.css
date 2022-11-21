@@ -1,0 +1,12 @@
+body {
+    margin-top: 20px;
+    font-family: 'Oswald', sans-serif;
+    background-image: url('../images/background city sky.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.link-to-page {
+    float: right;
+    margin: 0 2px 0 2px;
+}
