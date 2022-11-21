@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    Username: {{ redactor.username }}
+  </h1>
+  <br>
+
+  <p><strong>First name:</strong> {{ redactor.first_name }}</p>
+  <p><strong>Last name:</strong> {{ redactor.last_name }}</p>
+  <p><strong>Years of experience:</strong> {{ redactor.years_of_experience }}</p>
+  <p><strong>Is staff:</strong> {{ redactor.is_staff }}</p>
+
+  <div class="ml-3">
+    <h4>Newspapers</h4>
+
+
+    {% if redactor.newspapers.all %}
+    <table class="table table-hover" style="background-color: rgba(245, 245, 245, 0.4)">
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Published date</th>
+        <th>Topic</th>
+      </tr>
+    {% for newspaper in redactor.newspapers.all %}
+      <tr>
+        <td><a href="{% url "catalog:newspaper-detail" pk=newspaper.id %} ">{{ newspaper.id }}</a></td>
+        <td>{{ newspaper.title }}</td>
+        <td>{{ newspaper.published_date }}</td>
+        <td>{{ newspaper.topic.name }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+    {% else %}
+      <p>No newspapers!</p>
+    {% endif %}
+  </div>
+  <a href="{% url 'catalog:redactor-delete' pk=redactor.id %}" class="btn btn-danger link-to-page">
+      Delete
+  </a>
+
+  <a href="{% url 'catalog:redactor-update' pk=redactor.id %}" class="btn btn-secondary link-to-page">
+      Update
+  </a>
+{% endblock %}

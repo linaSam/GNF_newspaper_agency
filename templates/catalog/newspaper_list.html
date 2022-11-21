@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <h1>
+    Newspaper list
+    <a href="{% url 'catalog:newspaper-create' %}" class="btn btn-primary link-to-page">
+      Add newspaper
+    </a>
+  </h1>
+
+  <br>
+  <form action="" method="get" class="form-inline">
+    {{ search_form|crispy }}
+    <input type="submit" class="btn btn-secondary" value="🔍">
+  </form>
+
+  <br>
+
+  {% if newspaper_list %}
+    <table class="table table-hover" style="background-color: rgba(245, 245, 245, 0.4)">
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Published date</th>
+        <th>Topic</th>
+      </tr>
+    {% for newspaper in newspaper_list %}
+      <tr>
+        <td><a href="{% url "catalog:newspaper-detail" pk=newspaper.id %} ">{{ newspaper.id }}</a></td>
+        <td>{{ newspaper.title }}</td>
+        <td>{{ newspaper.published_date }}</td>
+        <td>{{ newspaper.topic.name }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+  {% else %}
+    <p>There are no newspaper in catalog</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <header class="p-3 mb-2 text-white"
+          style="background-color: lightslategrey;">
+    <div class="row">
+      <div class="col-sm-8 " style="">
+        <h1>GNF</h1>
+        <p>(Global News Finder)</p>
+        <h3>Newspaper Agency # 1</h3>
+      </div>
+      <div class="col-sm-4 " style="">
+        <div class="container">
+          <p>
+            <i class="fa-5x">🄶🄽🄵</i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <article class="py-5 text-center" style="background-color: rgba(245, 245, 245, 0.05)">
+    <h4>The GNF archive-site has the following record counts:</h4>
+    <br>
+    <ul style="list-style: none;">
+        <li><strong>Redactors:</strong> {{ num_redactors }}</li>
+        <li><strong>Newspapers:</strong> {{ num_newspapers }}</li>
+        <li><strong>Topics:</strong> {{ num_topics }}</li>
+    </ul>
+  </article>
+  <footer class="footer fixed-bottom text-light text-center"
+            style="background-color: lightslategrey">
+      <p>
+        You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}. We hope you will come back!
+        <br>
+        Our email: gnf@gnf.com
+      </p>
+    </footer>
+{% endblock %}
