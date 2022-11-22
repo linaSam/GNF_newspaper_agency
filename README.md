@@ -10,7 +10,7 @@ Username: admin
 Password: 12345t6y7
 ```
 
-[Newspaper agency project deployed to Render](https://newspaper-agency-0ah9.onrender.com)
+[Newspaper agency project deployed to Render](https://gnf-newspaper-agency.onrender.com)
 
 
 ## Installation
