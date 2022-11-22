@@ -6,7 +6,7 @@ Django project for managing newspapers and their redactors in nespaper agency
 Use the following data to access the resource:
 
 ```shell
-Username: admin
+Username: admin_redactor
 Password: 12345t6y7
 ```
 
