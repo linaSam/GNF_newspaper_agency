@@ -31,3 +31,6 @@ python manage.py runserver # starts Django Server
 * Authentication functionality for Redactor/User
 * Managing newspapers redactors & topics directly from website interface
 * Powerful admin panel for advanced managing
+
+## Demo
+![demo](https://user-images.githubusercontent.com/107580083/204035683-2cce9a7c-5306-44ee-b376-5c9ce9f9d728.png)
