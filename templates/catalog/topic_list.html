@@ -34,14 +34,14 @@
           <td>
               {{ topic.name }}
           </td>
-          <td style="text-align: center">
+          <td>
             <a href="{% url 'catalog:topic-update' pk=topic.id %}">
-              📝
+              <span>📝</span>
             </a>
           </td>
-          <td style="text-align: center">
+          <td>
             <a href="{% url 'catalog:topic-delete' pk=topic.id %}">
-              ❌️
+              <span>❌</span>️
             </a>
           </td>
         </tr>
