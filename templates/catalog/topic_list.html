@@ -34,18 +34,16 @@
           <td>
               {{ topic.name }}
           </td>
-          <td>
-              <a style="text-align: center"
-                 href="{% url 'catalog:topic-update' pk=topic.id %}">
-                📝
-              </a>
-            </td>
-            <td>
-              <a style="text-align: center"
-                href="{% url 'catalog:topic-delete' pk=topic.id %}">
-                ❌️
-              </a>
-            </td>
+          <td style="text-align: center">
+            <a href="{% url 'catalog:topic-update' pk=topic.id %}">
+              📝
+            </a>
+          </td>
+          <td style="text-align: center">
+            <a href="{% url 'catalog:topic-delete' pk=topic.id %}">
+              ❌️
+            </a>
+          </td>
         </tr>
       {% endfor %}
     </table>
