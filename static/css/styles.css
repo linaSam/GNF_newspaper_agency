@@ -5,6 +5,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.content{
+    margin-bottom: 10px;
+}
 
 .link-to-page {
     float: right;
