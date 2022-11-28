@@ -1,4 +1,4 @@
-# Newspaper-agency Project
+# 🧾Newspaper-agency Project
 
 Django project for managing newspapers and their redactors in nespaper agency
 
@@ -6,7 +6,7 @@ Django project for managing newspapers and their redactors in nespaper agency
 Use the following data to access the resource:
 
 ```shell
-Username: admin_redactor
+Username: test_testovich
 Password: 12345t6y7
 ```
 
