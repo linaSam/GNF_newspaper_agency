@@ -23,6 +23,7 @@ cd newspaper-agency
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirments.txt
+python manage.py migrate
 python manage.py runserver # starts Django Server
 ```
 
